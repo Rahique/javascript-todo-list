@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #f6b365, #fda065);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-input {
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  padding: 20px 60px;
+  font-family: "poppins";
+  font-weight: bold;
+}
+.todo-button {
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  background: linear-gradient(120deg, #0093e9, #80d0c7);
+  cursor: pointer;
+  padding: 14px 20px;
+  transition: all 0.1s ease;
+  &:hover i {
+    transform: rotate(90deg);
+  }
+
+  i {
+    font-size: 2rem;
+    color: white;
+    transition: 0.3s ease;
+  }
+}
+/*Todo list styling*/
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .todo-list {
+    list-style: none;
+    min-width: 40%;
+  }
+  .todo-div {
+    margin-top: 20px;
+    background: linear-gradient(10deg, #0093e9, #80d0c7);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    transition: all .5s ease;
+    justify-content: space-between;
+    align-items: center;
+    .todo-item {
+      display: flex;
+      flex: 1;
+      padding-left: 2rem;
+    }
+  }
+  .check-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    background: linear-gradient(120deg, #81fbb8, #28c76f);
+    color: white;
+    .fa-check {
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+    &:hover .fa-check {
+      transform: scale(1.5);
+    }
+  }
+  .delete-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    background: linear-gradient(120deg, #fd5a19, #e80505);
+    color: white;
+    .fa-trash {
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    &:hover .fa-trash {
+      transform: scale(1.5);
+    }
+  }
+}
+.fa-check, .fa-trash{
+  pointer-events: none;
+}
+.complited{
+  text-decoration: line-through;
+  opacity: 70%;
+  filter: blur(1px);
+}
+.delete-drop{
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+
